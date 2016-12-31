@@ -11,7 +11,7 @@
 
 <center><div class="rate"><ul>
 	<li class="rateContainer">Rate</li>
-	<li><input id="rate" type="number" value="130.25" maxlength="5"></li>
+	<li><input id="rate" type="number"></li>
 	<li><button id="rate" class="update">Update</button></li>
 </ul></div>
 <form id="reset">
@@ -20,14 +20,14 @@
 <td>
 <section class="one">
     <center><h1>GBP - PKR</h1></center>
-<center><table class="converter" width="45%" border="0">
+<center><table class="converter" max-width="45%" border="0">
   <tr>
     <th>GBP</th>
-	<td><input id="box2" type="number" maxlength="6" oninput="calculate()" /></td>
+	<td><input id="box2" type="number" oninput="calculate()" /></td>
    </tr>
    <tr>
     <th>PKR</th>
-	<td><output id="PKR"></td>
+	<td><output id="PKR"/></td>
   </tr>
 </table></center>
 </section>
@@ -35,14 +35,14 @@
 <td width="45%">
 <section class="two">
     <center><h1>PKR - GBP</h1></center>
-<center><table class="converter" width="45%" border="0">
+<center><table class="converter" max-width="45%" border="0">
   <tr>
     <th>PKR</th>
-	<td><input id="box4" type="number" maxlength="6" oninput="calculate1()" /></td>
+	<td><input id="box4" type="number" oninput="calculate1()" /></td>
    </tr>
    <tr>
     <th>GBP</th>
-	<td><output id="GBP"></td>
+	<td><output id="GBP"/></td>
   </tr>
 </table></center>
 </section>
@@ -50,8 +50,9 @@
 </tr>
 </table>
 </form>
-<a href="#" class="myButton" onclick="myReset()">reset</a>
+<a class="myButton" onclick="myReset()">reset</a>
 </center>
+</body>
 </html>
 
 
