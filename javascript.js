@@ -1,4 +1,4 @@
-			function GbpPkr() {
+	function GbpPkr() {
 		var myRate = document.getElementById('rate').value;	
 		var myGBPAmount = document.getElementById('GBPAmount').value;
 		var myIntmyGBPAmount = parseInt(myGBPAmount);
@@ -13,14 +13,14 @@
 	function PkrGbp() {
 		var myRate = document.getElementById('rate').value;	
 		var myPKRAmount = document.getElementById('PKRAmount').value;
-        var myFees = document.getElementById('fees').value;
+        	var myFees = document.getElementById('fees').value;
 		var GBP = document.getElementById('GBP');	
 		var myGBP = myPKRAmount / myRate;
 		var GBPRound = myGBP.toFixed(2);
 		GBP.value = GBPRound;
-        var amount = parseInt(GBPRound);
-        var fee = parseInt(myFees);
-        var myTotal ="&pound;"+(fee + amount); 
+        	var amount = parseInt(GBPRound);
+        	var fee = parseInt(myFees);
+        	var myTotal ="&pound;"+(fee + amount); 
 		document.getElementById('total1').innerHTML = myTotal;
 	}
 	function myReset() {
