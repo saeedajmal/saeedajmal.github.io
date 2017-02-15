@@ -1,10 +1,10 @@
 		function calculate() {
-		var myBox1 = document.getElementById('rate').value;	
-		var myBox2 = document.getElementById('box2').value;
-		var myBox6 = parseInt(myBox2);
+		var myRate = document.getElementById('rate').value;	
+		var myGBPamount = document.getElementById('GBPamount').value;
+		var myBox6 = parseInt(myGBPamount);
 		var myBox5 = parseInt(document.getElementById('box5').value);
 		var PKR = document.getElementById('PKR');	
-		var myPKR = myBox1 * myBox2;
+		var myPKR = myRate * myGBPamount;
 		var PKRRound = Math.round(myPKR);
 		PKR.value = PKRRound;
 		var total ="&pound;"+(myBox5 + myBox6); 
