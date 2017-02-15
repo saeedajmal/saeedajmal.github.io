@@ -4,70 +4,61 @@
 		<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
 		<script type="text/javascript" src="javascript.js"></script>
 	</head>
-<body>
-	<center><div class="rate"><ul>
-		<li class="rateContainer">Rate</li>
-		<li><input id="rate" type="number" value="" maxlength="5"></li>
-		<li><button id="rate" class="myButton">Update</button></li>
-	</ul></div>
+	<body>
+		<center><div class="rate"><ul>
+			<li class="rateContainer">Rate</li>
+			<li><input id="rate" type="number"></li>
+			<li><button id="rate" class="myButton">Update</button></li>
+		</ul></div>
 	<form id="reset">
-	<table id="container">
-		<tr>
-			<td>
-				<section class="one">
-    				<center><h1>GBP - PKR</h1></center>
+		<ul>
+			<li><section class="one">
+				<center><h1>GBP - PKR</h1></center>
 				<center><table class="converter" width="45%" border="0">
-  				<tr>
-    					<th>GBP</th>
-					<td><input id="GBPamount" type="number" maxlength="6" oninput="calculate()" /></td>
-  				</tr>
-   				<tr>
-    					<th>Fee</th>
-					<td><input id="box5" type="number" value="5" oninput="calculate()"/></td>
-   				</tr>
-   				<tr>
-    					<th>PKR</th>
-					<td><output id="PKR"/></td>
-  				</tr>
-				<tr>
-    					<th>Total</th>
-					<td><output id="total"/></td>
-  				</tr>
-			</table></center>
-		</section>
-	</td>
-	<td width="45%">
-		<section class="two">
-    			<center><h1>PKR - GBP</h1></center>
-			<center><table class="converter" width="45%" border="0">
-  			<tr>
-    				<th>PKR</th>
-				<td><input id="box4" type="number" maxlength="6" oninput="calculate1()" /></td>
-   			</tr>
-   			<tr>
-    				<th>Fee</th>
-				<td><input id="box5" type="number" value="5" oninput="calculate1()"/></td>
-  			</tr>
-   			<tr>
-    				<th>GBP</th>
-				<td><output id="GBP"/></td>
-  			</tr>
-  			<tr>
-    				<th>Total</th>
-				<td><output id="total1"/></td>
-  			</tr>
-		</table></center>
-		</section>
-	</td>
-	</tr>
-	</table>
+					<tr>
+						<th>GBP</th>
+						<td><input id="GBPAmount" type="number" oninput="GbpPkr()" /></td>
+					</tr>
+					<tr>
+						<th>Fee</th>
+						<td><input id="fee" type="number" value="5" oninput="GbpPkr()" disabled/></td>
+					</tr>
+					<tr>
+						<th>PKR</th>
+						<td><output id="PKR"/></td>
+					</tr>
+					<tr>
+						<th>Total</th>
+						<td><output id="total"/></td>
+					</tr>
+				</table></center>
+			</section></li>
+			<li><section class="two">
+				<center><h1>PKR - GBP</h1></center>
+				<center><table class="converter" width="45%" border="0">
+					<tr>
+						<th>PKR</th>
+						<td><input id="PKRAmount" type="number" oninput="PkrGbp()"  /></td>
+					</tr>
+					<tr>
+						<th>Fee</th>
+						<td><input id="fees" type="number" value="5" oninput="PkrGbp()" disabled/></td>
+					</tr>
+					<tr>
+						<th>GBP</th>
+						<td><output id="GBP"/></td>
+					</tr>
+					<tr>
+						<th>Total</th>
+						<td><output id="total1"/></td>
+					</tr>
+				</table></center>
+			</section></li>
+		</ul>
 	</form>
 	<a href="#" class="myButton" onclick="myReset()">reset</a>
 	</center>
-</body>
+	</body>
 </html>
-
-
-
 
 
