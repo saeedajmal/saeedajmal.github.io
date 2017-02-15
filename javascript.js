@@ -1,27 +1,27 @@
-		function calculate() {
+			function GbpPkr() {
 		var myRate = document.getElementById('rate').value;	
-		var myGBPamount = document.getElementById('GBPamount').value;
-		var myBox6 = parseInt(myGBPamount);
-		var myBox5 = parseInt(document.getElementById('box5').value);
+		var myGBPAmount = document.getElementById('GBPAmount').value;
+		var myIntmyGBPAmount = parseInt(myGBPAmount);
+		var myFee = parseInt(document.getElementById('fee').value);
 		var PKR = document.getElementById('PKR');	
-		var myPKR = myRate * myGBPamount;
-		var PKRRound = Math.round(myPKR);
+		var myPKR = myRate * myGBPAmount;
+		var PKRRound = myPKR.toFixed(0);
 		PKR.value = PKRRound;
-		var total ="&pound;"+(myBox5 + myBox6); 
-		document.getElementById('total').innerHTML = total;
+		var myTotal ="&pound;"+(myFee + myIntmyGBPAmount); 
+		document.getElementById('total').innerHTML = myTotal;
 	}
-	function calculate1() {
-		var myBox3 = document.getElementById('rate').value;	
-		var myBox4 = document.getElementById('box4').value;
-        var myBox5 = document.getElementById('box5').value;
+	function PkrGbp() {
+		var myRate = document.getElementById('rate').value;	
+		var myPKRAmount = document.getElementById('PKRAmount').value;
+        var myFees = document.getElementById('fees').value;
 		var GBP = document.getElementById('GBP');	
-		var myGBP = myBox4 / myBox3;
-		var GBPRound = Math.round(myGBP);
+		var myGBP = myPKRAmount / myRate;
+		var GBPRound = myGBP.toFixed(2);
 		GBP.value = GBPRound;
         var amount = parseInt(GBPRound);
-        var fee = parseInt(myBox5);
-        var total ="&pound;"+(fee + amount); 
-		document.getElementById('total1').innerHTML = total;
+        var fee = parseInt(myFees);
+        var myTotal ="&pound;"+(fee + amount); 
+		document.getElementById('total1').innerHTML = myTotal;
 	}
 	function myReset() {
 		document.getElementById("reset").reset();
@@ -33,6 +33,6 @@
 				input.value=localStorage.getItem("rate");
 			}
 		input.oninput=function(){
-		localStorage.setItem("rate",input.value);
+			localStorage.setItem("rate",input.value);
 		};
 	};
