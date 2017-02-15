@@ -5,7 +5,7 @@
 		var myBox5 = parseInt(document.getElementById('box5').value);
 		var PKR = document.getElementById('PKR');	
 		var myPKR = myBox1 * myBox2;
-		var PKRRound = myPKR.toFixed(0);
+		var PKRRound = Math.round(myPKR);
 		PKR.value = PKRRound;
 		var total ="&pound;"+(myBox5 + myBox6); 
 		document.getElementById('total').innerHTML = total;
@@ -16,7 +16,7 @@
         var myBox5 = document.getElementById('box5').value;
 		var GBP = document.getElementById('GBP');	
 		var myGBP = myBox4 / myBox3;
-		var GBPRound = myGBP.toFixed(2);
+		var GBPRound = Math.round(myGBP);
 		GBP.value = GBPRound;
         var amount = parseInt(GBPRound);
         var fee = parseInt(myBox5);
